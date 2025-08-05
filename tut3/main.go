@@ -2,17 +2,15 @@ package main
 import "fmt"
 
 
-func main() {
-	var name string = "Bhanu"
-	printMe(name)
-	add(5, 2)
+type Number interface{
+	int | float64
 }
 
-func printMe(val string) {
-	fmt.Println("Hello!")
-	fmt.Println(val)
+func main(){
+	addition(13, 26)
+	addition(1.3, 2.6)
 }
 
-func add(num1 int, num2 int){
+func addition[intFloat Number](num1 intFloat, num2 intFloat){
 	fmt.Println(num1 + num2)
 }
