@@ -7,11 +7,11 @@ import (
 
 
 func main(){
-	result := 13 * 3
+	result := 0
 	var err_val bool = false
 	iferr := ifElseifStatements(result, err_val)
 	normalSwitchStatement(result, iferr)
-	conditionalSwitchStatement(result)
+	condSwitchStatement(result, iferr)
 }
 
 func ifElseifStatements(result int, err_val bool) (error){
@@ -64,6 +64,8 @@ func condSwitchStatement(result int, err error){
 			fmt.Println("Eval with conditional switch fn. 2")
 		case 39:
 			fmt.Println("Eval with conditional switch fn. Lucky Number!")
+		default:
+			fmt.Println("Eval with conditional switch fn. Everything else")
 		}
 	}
 }
